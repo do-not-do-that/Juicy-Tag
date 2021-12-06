@@ -1,7 +1,25 @@
 {% extends 'base.html'%}
 
 {% block content %}
-
+<div class="container">
+    <div class="row">
+      <div class="col-md-4 d-inline-block rounded" style="background-color: lightgreen">
+          <h3>
+          기한 있는 일정
+          </h3>
+      </div>
+      <div class="col-md-4 d-inline-block" style="background-color: lightgreen">
+          <h3>
+          기한 없는 일정
+          </h3>
+      </div>
+      <div class="col-md-4 d-inline-block" style="background-color: lightgreen">
+          <h3>
+          마감된 일정
+          </h3>
+      </div>
+    </div>
+</div>
 <div class="col-md-12">
     <div class="container">
         {% for list in juicy_list %}

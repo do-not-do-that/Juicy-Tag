@@ -10,15 +10,15 @@ class JuicyBoard(models.Model):
     content = models.CharField(db_column='CONTENT', max_length=2000, blank=True, null=True)  # Field name made lowercase.
     is_complete = models.IntegerField(db_column='IS_COMPLETE', blank=True, null=True)  # Field name made lowercase.
     priority = models.IntegerField(db_column='PRIORITY', blank=True, null=True)  # Field name made lowercase.
-    created_at = models.DateField(db_column='CREATED_AT', blank=True, null=True)  # Field name made lowercase.
+    created_at = models.DateField(db_column='CREATED_AT', auto_now_add=True)  # Field name made lowercase.
+    end_date = models.DateField(db_column='END_DATE',blank=True, null=True)
 
-    def juicy_save(self):
-        self.save()
-    
     class Meta:
         managed = False
         db_table = 'juicy_board'
         
+    def juicy_save(self):
+        self.save()
         
 class TagCode(models.Model):
     tcode = models.CharField(db_column='TCODE', primary_key=True, max_length=4)  # Field name made lowercase.

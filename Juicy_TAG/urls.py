@@ -28,5 +28,5 @@ urlpatterns = [
     
     # juicy_board
 
-    # path('board/', include('todo_board.urls')),
+    path('board/', include('juicy_board.urls')),
 ]

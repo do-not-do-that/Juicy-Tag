@@ -15,7 +15,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf.urls import include, url
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    
+    # juicy_main
+    
+    path('', include('juicy_main.urls')),
+    path('index/', include('juicy_main.urls')),
+    path('home/', include('juicy_main.urls')),
+    
+    # juicy_board
+
+    # path('board/', include('todo_board.urls')),
 ]

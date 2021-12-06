@@ -7,8 +7,10 @@
         {% for list in juicy_list %}
         <div class="list-group-item">
             <input type="checkbox" name={{list.title}} value={{list.title}}>
+            <a href="{% url 'juicy_board:juicy_board_detail' pk=list.no %}">
         
             {{list.title}}
+            </a>
             </div>
         {% endfor %}
     </div>

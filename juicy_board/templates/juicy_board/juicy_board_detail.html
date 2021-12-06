@@ -1,0 +1,21 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+<section id="blog">
+    <div class="container">
+        
+        {{juicy_list}}
+        
+        <h2>
+            {{juicy_list.title}}
+        </h2>
+        <p>
+            {{juicy_list.content | linebreaksbr}}
+        </p><br>
+        <h2>
+            <a href='{% url "juicy_board:juicy_board_update" pk=juicy_list.pk %}'> 수정</a>
+        </h2>
+    </div>
+</section>
+{% endblock %}

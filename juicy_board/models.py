@@ -12,6 +12,9 @@ class JuicyBoard(models.Model):
     priority = models.IntegerField(db_column='PRIORITY', blank=True, null=True)  # Field name made lowercase.
     created_at = models.DateField(db_column='CREATED_AT', blank=True, null=True)  # Field name made lowercase.
 
+    def juicy_save(self):
+        self.save()
+    
     class Meta:
         managed = False
         db_table = 'juicy_board'

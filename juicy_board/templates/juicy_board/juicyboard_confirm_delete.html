@@ -1,0 +1,19 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+<section id="blog">
+    <div class="container">
+        
+        <form method="POST" class="post-form">
+            {% csrf_token %}
+            
+            <p>
+               일정 [ {{juicy_list.title}} ]을 삭제하실 거에요? '^'
+            </p>
+            <input type="submit" class="save btn btn-default" value="Confirm"/>
+            
+        </form>
+    </div>
+</section>
+{% endblock %}

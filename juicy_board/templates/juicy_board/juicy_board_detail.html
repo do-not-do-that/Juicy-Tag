@@ -16,6 +16,9 @@
         <h2>
             <a href='{% url "juicy_board:juicy_board_update" pk=juicy_list.pk %}'> 수정</a>
         </h2>
+        <h2>
+            <a href='{% url "juicy_board:juicy_board_delete" pk=juicy_list.pk %}'> 삭제</a>
+        </h2>
     </div>
 </section>
 {% endblock %}

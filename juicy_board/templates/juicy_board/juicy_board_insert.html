@@ -1,6 +1,13 @@
-<form method="POST" class="post-form" action="{% url 'juicy_board:juicy_board_insert'%}">
+{% extends 'base.html' %}
+{% block content %}
+<div container>
+    <form method="POST" class="post-form" action="{% url 'juicy_board:juicy_board_insert'%}">
     {% csrf_token %}
         
     {{form.as_p}}
-    <button type="submit" class="btn btn-primary">저장하기</button>
+    <button type="submit" class="btn btn-warning">저장하기</button>
 </form>
+    
+</div>
+
+{% endblock %}

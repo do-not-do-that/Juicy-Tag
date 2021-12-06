@@ -48,3 +48,8 @@ class Juicy_board_update(generic.UpdateView):
         form = self.get_form(form_class)
         context = self.get_context_data(object=self.object, form=form)
         return self.render_to_response(context)
+    
+class Juicy_board_delete(generic.DeleteView):
+    model = JuicyBoard
+    success_url = '/board/'
+    context_object_name = 'juicy_list'
